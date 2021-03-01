@@ -1,4 +1,10 @@
 $(document).ready(function () {
+   	$('.ui.sticky').sticky({
+		context: '#showart'
+	});
+	$("#mainnav").visibility({type:"fixed"});
+
+
 	$('body').on('click','.removeRec', function () {
 		if(confirm('دڵنیای له‌سڕینه‌وه‌ی؟')){
 			var id = $(this).data('id');
