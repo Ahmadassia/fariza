@@ -10,7 +10,53 @@ class Home extends MY_Controller {
 	public function category(){
 		$this->index();
 	}
-	
+	public function follow(){
+		if($this->session->userdata('authorstate') !== null){
+			$id = $this->input->post('id');
+			$type = $this->input->post('type');
+			$typefollow = $this->input->post('typefollow');
+			if($id > 0 and ($type == "cate" or $type == "author")){
+				if($type == "cate"){
+					if($typefollow == "follow"){
+						$data = ['id_cate_fk' => $id , 'id_author_fk' => $this->session->userdata('authorstate')];
+						$res = $this->getdb->insertdb('follow_category',$data);
+					} else {
+						$this->db->where('id_cate_fk' , $id);
+						$this->db->where('id_author_fk' , $this->session->userdata('authorstate'));
+						$res = $this->db->delete('follow_category');
+					}
+				} else {
+					if($typefollow == "follow"){
+						$data = ['id_author_f_fk' => $id , 'id_author_fk' => $this->session->userdata('authorstate')];
+						$res = $this->getdb->insertdb('follow_author',$data);
+					} else {
+						$this->db->where('id_author_f_fk' , $id);
+						$this->db->where('id_author_fk' , $this->session->userdata('authorstate'));
+						$res = $this->db->delete('follow_author');
+					}
+				}
+				if($res > 0){
+					$json['msg'] = 'بەسەرکەوتویی جێبەجێ کرا';
+					$json['class'] = 'success';
+					$json['states'] = 'ok';
+				} else {
+					$json['msg'] = 'دوبارە هەوڵبدەرەوە!';
+					$json['class'] = 'warning';
+					$json['states'] = 'failed';
+				}
+				echo json_encode($json);
+
+			} else {
+				//$this->index();
+			}
+		} else {
+			$json['msg'] = 'بۆ فۆلۆو کردن دەبێت خۆت تۆمارکردبێت';
+			$json['class'] = 'warning';
+			$json['states'] = 'failed';
+			echo json_encode($json);
+		}
+
+	}
 	public function index(){
 		$data['list'] = $this->getdata();
 		$data['article'] = $this->getdata(5);

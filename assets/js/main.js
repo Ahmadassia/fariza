@@ -4,6 +4,28 @@ $(document).ready(function () {
 	});
 	$("#mainnav").visibility({type:"fixed"});
 
+    $('body').on('click','.btnFollow', function () {
+		var th = $(this);
+		var type = $(th).data('type');
+		var id = $(th).data('id');
+		var typefollow = $(th).data('typefollow');
+		$.post(mainUrl+'home/follow', {id: id,type:type,typefollow:typefollow}, function(data) {
+			if(data.states == "ok"){
+				if(typefollow == "follow"){
+					$(th).removeClass("inverted");
+					$(th).data("typefollow","unfollow");
+				} else {
+					$(th).addClass("inverted");
+					$(th).data("typefollow","follow");
+				}
+			}
+			$('body').toast({
+				class: data.class,
+				message: data.msg,
+				displayTime: 6000
+			},'json');
+		},'json');
+	});
 
 	$('body').on('click','.removeRec', function () {
 		if(confirm('دڵنیای له‌سڕینه‌وه‌ی؟')){
