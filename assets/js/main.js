@@ -1,10 +1,10 @@
 $(document).ready(function () {
-   	$('.ui.sticky').sticky({
+	$('.ui.sticky').sticky({
 		context: '#showart'
 	});
 	$("#mainnav").visibility({type:"fixed"});
 
-    $('body').on('click','.btnFollow', function () {
+	$('body').on('click','.btnFollow', function () {
 		var th = $(this);
 		var type = $(th).data('type');
 		var id = $(th).data('id');
@@ -26,7 +26,17 @@ $(document).ready(function () {
 			},'json');
 		},'json');
 	});
-
+	$('body').on('click','.prosForm', function () {
+        var page = $(this).data('page');
+        var id = $(this).data('id');
+        $.post(mainUrl+page, {id:id},
+            function (data, textStatus, jqXHR) {
+                $('#prosForm').html(data);
+				$('.ui.dropdown').dropdown();
+                $('#prosForm').modal('show');
+            }
+        );
+    });
 	$('body').on('click','.removeRec', function () {
 		if(confirm('دڵنیای له‌سڕینه‌وه‌ی؟')){
 			var id = $(this).data('id');
