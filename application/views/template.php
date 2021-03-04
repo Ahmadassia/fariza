@@ -21,7 +21,7 @@
     if(isset($dashbord)){ ?>
         <div id="mainmenu">
             <div class="toppage ui vertical inverted menu">
-                <a class="item" href="<?=base_url('admin')?>" class=""><i class="home icon"></i> &nbsp; <?=$this->webop['web_title']?> &nbsp; </a>
+                <a class="item" href="<?=base_url()?>" class=""><i class="home icon"></i> &nbsp; <?=$this->webop['web_title']?> &nbsp; </a>
             </div>
             <div class="ui vertical inverted pointing menu">
                 <a href="<?=base_url('author')?>" class="item active "><i class="grid layout icon"></i> نوسەر</a>
