@@ -15,6 +15,11 @@ class Author extends MY_Controller {
 			$dbs['where']['id_article'] = $id;
 			$dbs['where']['id_author_fk'] = $this->session->userdata('authorstate');
 			$data['data'] = $this->getdb->getall($dbs);
+			
+			$db['from'] = 'article_cate';
+			$db['where']['id_article_fk'] = $id;
+			$data['article_cate'] = $this->getdb->getall($db);
+
 			if(count($data['data']) === 1){
 				$data['data'] = $data['data'][0];
 			}
