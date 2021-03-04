@@ -21,7 +21,7 @@
             <div class="toppage menu">
             </div>
             <div class="ui vertical inverted pointing menu">
-                <a href="<?=base_url('admin')?>" class="item active "><i class="user  icon"></i> بەڕێوبەر</a>
+                <a href="<?=base_url('admin')?>" class="item"><i class="user  icon"></i> بەڕێوبەر</a>
                 <a href="<?=base_url('category')?>" class="item"><i class="grid layout icon"></i> پۆلێن</a>
                 <a href="<?=base_url('')?>" class="item"><i class="edit layout icon"></i> بڵاوکراوەکان</a>
             </div>
