@@ -23,4 +23,4 @@ database.php
 
 fariza\application\config
 
-ئەو فۆڵدەرەیە
+ئەو فۆڵدەرەدایە
