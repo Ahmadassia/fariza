@@ -14,3 +14,19 @@
  دەتوانى فایلى config.php  بەکار بهێنى بۆ گۆڕین و ڕکخستى پڕۆژەکە بۆ نمونە ئەگەر ویستت ناونیشانى پڕۆژەکە بگۆڕیت یان دەتوانى فایلى database.php بەکار بهێنى بۆ گۆڕین و ڕکخستى داتابەییسى پڕۆجێکتەکە شوێنى هەر دوو فایلەکە دەکەوێتە fariza\application\config لە ئەو فۆڵدەرەدایە.
 </div>
 
+
+
+<img style="float: right;" src="https://raw.githubusercontent.com/bilalmohammadsaeed/fariza/master/screenshot/fariza%20(1).png" width="200" height="400" />
+<img style="float: right;" src="https://raw.githubusercontent.com/bilalmohammadsaeed/fariza/master/screenshot/fariza%20(4).png" width="200" height="400" />
+
+<br>
+<img style="float: right;" src="https://raw.githubusercontent.com/bilalmohammadsaeed/fariza/master/screenshot/fariza%20(2).png" width="400" height="300" />
+<img style="float: right;" src="https://raw.githubusercontent.com/bilalmohammadsaeed/fariza/master/screenshot/fariza%20(3).png" width="400" height="300" />
+<br>
+<img style="float: right;" src="https://raw.githubusercontent.com/bilalmohammadsaeed/fariza/master/screenshot/fariza%20(5).png" width="400" height="300" />
+<img style="float: right;" src="https://raw.githubusercontent.com/bilalmohammadsaeed/fariza/master/screenshot/fariza%20(6).png" width="400" height="300" />
+<br>
+
+<img style="float: right;" src="https://raw.githubusercontent.com/bilalmohammadsaeed/fariza/master/screenshot/fariza%20(7).png" width="400" height="300" />
+
+
